@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Browser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CqM-3x-toi">
+                                <rect key="frame" x="0.0" y="28" width="320" height="30"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tGH-yg-0WQ">
+                                        <rect key="frame" x="8" y="0.0" width="312" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="URL" returnKeyType="go"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="JSs-sa-73d"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="tGH-yg-0WQ" secondAttribute="trailing" id="Piv-yP-3kA"/>
+                                    <constraint firstItem="tGH-yg-0WQ" firstAttribute="leading" secondItem="CqM-3x-toi" secondAttribute="leading" constant="8" id="RdS-YK-3Ru"/>
+                                    <constraint firstItem="tGH-yg-0WQ" firstAttribute="top" secondItem="CqM-3x-toi" secondAttribute="top" id="lej-an-ZBI"/>
+                                    <constraint firstAttribute="bottom" secondItem="tGH-yg-0WQ" secondAttribute="bottom" id="zSi-X1-1DR"/>
+                                </constraints>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rDd-ej-clq">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="&lt;" id="2WE-Ow-amp">
+                                        <connections>
+                                            <action selector="back:" destination="BYZ-38-t0r" id="ej2-mC-1PC"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="ZTY-3y-W2k"/>
+                                    <barButtonItem title="&gt;" id="eVS-Ap-CPe">
+                                        <connections>
+                                            <action selector="forward:" destination="BYZ-38-t0r" id="dtG-zi-jFR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="eCj-j5-dY0"/>
+                                    <barButtonItem title="R" id="9Pc-wW-VYL">
+                                        <connections>
+                                            <action selector="reload:" destination="BYZ-38-t0r" id="Cbn-Hk-px4"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="U1c-lC-Rtz">
+                                <rect key="frame" x="16" y="58" width="288" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="U1c-lC-Rtz" secondAttribute="trailing" id="2aR-JA-hXm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rDd-ej-clq" secondAttribute="bottom" id="6Nb-73-f60"/>
+                            <constraint firstItem="CqM-3x-toi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="FGD-wf-5rp"/>
+                            <constraint firstItem="U1c-lC-Rtz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FYy-CB-rWB"/>
+                            <constraint firstItem="rDd-ej-clq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="H6X-en-a6j"/>
+                            <constraint firstItem="U1c-lC-Rtz" firstAttribute="top" secondItem="CqM-3x-toi" secondAttribute="bottom" id="Jbk-Vk-Xxe"/>
+                            <constraint firstItem="CqM-3x-toi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eNh-gP-vQy"/>
+                            <constraint firstAttribute="trailing" secondItem="rDd-ej-clq" secondAttribute="trailing" id="gLq-lt-iWA"/>
+                            <constraint firstAttribute="trailing" secondItem="CqM-3x-toi" secondAttribute="trailing" id="hYK-Wr-BQH"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="backButton" destination="2WE-Ow-amp" id="fZZ-59-uRt"/>
+                        <outlet property="barView" destination="CqM-3x-toi" id="eXe-3U-5su"/>
+                        <outlet property="forwardButton" destination="eVS-Ap-CPe" id="l5v-TT-hIh"/>
+                        <outlet property="progressView" destination="U1c-lC-Rtz" id="3ug-VJ-kGb"/>
+                        <outlet property="reloadButton" destination="9Pc-wW-VYL" id="hGH-uS-kdo"/>
+                        <outlet property="urlField" destination="tGH-yg-0WQ" id="P0M-Vl-5MM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-82.5" y="4.225352112676056"/>
+        </scene>
+    </scenes>
+</document>
